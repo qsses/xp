@@ -2,6 +2,11 @@
 
 一个纯 HTML/CSS/JavaScript 的 Windows XP 怀旧桌面模拟器。
 
+## 在线演示
+
+- [qssec1.github.io/xp](https://qssec1.github.io/xp/)
+- [qsses.github.io/xp](https://qsses.github.io/xp/)
+
 ## 运行
 
 直接打开 `index.html`，或在当前目录启动静态服务器：
