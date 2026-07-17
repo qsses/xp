@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows XP 2005</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section id="boot" class="screen boot-screen">
+    <div class="xp-logo">
+      <span class="win-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <div><small>Microsoft</small><strong>Windows <em>xp</em></strong></div>
+    </div>
+    <div class="boot-track"><span></span><span></span><span></span></div>
+    <p>Copyright © Microsoft Corporation</p>
+  </section>
+
+  <section id="login" class="screen login-screen hidden">
+    <div class="login-rule top"></div>
+    <div class="login-content">
+      <div class="login-copy">
+        <div class="login-wordmark">windows<sup>xp</sup></div>
+        <p>要开始，请单击您的用户名</p>
+      </div>
+      <button id="login-user" class="login-user" type="button">
+        <span class="avatar">👤</span>
+        <span><b>Administrator</b><small>怀念 2005 年的互联网</small></span>
+      </button>
+    </div>
+    <div class="login-rule bottom"></div>
+    <div class="login-footer">登录到 Windows 后，您可以开始使用计算机。</div>
+  </section>
+
+  <main id="desktop" class="screen desktop hidden" aria-label="Windows XP 桌面">
+    <div id="desktop-icons" class="desktop-icons"></div>
+    <div id="windows-layer" class="windows-layer"></div>
+    <div id="context-menu" class="context-menu hidden">
+      <button data-context="refresh">刷新</button>
+      <hr>
+      <button data-context="notepad">新建文本文档</button>
+      <hr>
+      <button data-context="display">属性</button>
+    </div>
+
+    <section id="start-menu" class="start-menu hidden" aria-label="开始菜单">
+      <header><span class="avatar small">👤</span><b>Administrator</b></header>
+      <div class="start-body">
+        <div id="start-programs" class="start-programs"></div>
+        <div class="start-places">
+          <button data-app="documents">📁 <b>我的文档</b></button>
+          <button data-app="computer">💻 <b>我的电脑</b></button>
+          <button data-app="control">⚙️ 控制面板</button>
+          <hr>
+          <button data-action="help">❓ 帮助和支持</button>
+          <button data-action="run">🏃 运行...</button>
+        </div>
+      </div>
+      <footer>
+        <button data-action="logoff">🔑 注销</button>
+        <button data-action="shutdown">⏻ 关闭计算机</button>
+      </footer>
+    </section>
+
+    <aside id="balloon" class="balloon hidden"><button aria-label="关闭通知">×</button><b></b><p></p></aside>
+
+    <footer class="taskbar">
+      <button id="start-button" class="start-button" type="button">
+        <span class="win-mark tiny" aria-hidden="true"><i></i><i></i><i></i><i></i></span>开始
+      </button>
+      <div class="quick-launch"><button data-app="ie" title="Internet Explorer">🌐</button><button data-app="notepad" title="记事本">📝</button></div>
+      <div id="task-buttons" class="task-buttons"></div>
+      <div class="tray"><span title="音量">🔊</span><span title="本地连接">🖧</span><time id="clock"></time></div>
+    </footer>
+  </main>
+
+  <section id="shutdown" class="screen shutdown-screen hidden">
+    <div class="login-wordmark">windows<sup>xp</sup></div>
+    <p id="shutdown-message">Windows 正在关机...</p>
+    <button id="restart-button" class="xp-button hidden" type="button">重新启动</button>
+  </section>
+
+  <template id="window-template">
+    <article class="xp-window">
+      <header class="titlebar">
+        <span class="window-icon"></span><b class="window-title"></b>
+        <div class="window-controls">
+          <button data-win="min" title="最小化">_</button>
+          <button data-win="max" title="最大化">□</button>
+          <button data-win="close" class="close" title="关闭">×</button>
+        </div>
+      </header>
+      <div class="window-body"></div>
+      <div class="resize-handle"></div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
